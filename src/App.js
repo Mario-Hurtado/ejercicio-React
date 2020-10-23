@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SignForm from "./components/form/SignForm";
+import "./App.css";
+
+const camposForm = [
+  {
+    name: "username",
+    type: "text",
+    placeholder: "Username",
+    longMinima: 8,
+    longMaxima: 30,
+  },
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Email",
+    longMinima: 8,
+    longMaxima: 30,
+  },
+  {
+    name: "password",
+    type: "password",
+    placeholder: "Password",
+    longMinima: 8,
+    longMaxima: 30,
+  },
+  {
+    name: "confirmPassword",
+    type: "password",
+    placeholder: "Confirm password",
+    longMinima: 8,
+    longMaxima: 30,
+  },
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <SignForm camposForm={camposForm} />;
 }
 
 export default App;
